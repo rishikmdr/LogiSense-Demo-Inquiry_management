@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #0f1117;
+  color: #e8edf5;
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track { background: #161b27; }
+::-webkit-scrollbar-thumb { background: #2a3348; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #3b4f6e; }
+
+.slide-over-enter { transform: translateX(100%); }
+.slide-over-enter-active { transform: translateX(0); transition: transform 300ms ease; }
+.slide-over-exit { transform: translateX(0); }
+.slide-over-exit-active { transform: translateX(100%); transition: transform 300ms ease; }
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+}
